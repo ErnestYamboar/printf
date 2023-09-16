@@ -1,3 +1,7 @@
 Pritf project 
-The project is done by my partner and i.
-create our own printf without the standard input output library.
+#The project is done by Mariam and Ernest.
+#We are to create our own printf without the standard input output library.
+#The printf must be able to handle the c, s, d, i, x, X, b, %, conversion specifiers.
+#In the task 0, we are supposed to create our printf to handle the conversion specifiers c, s, 
+and % using the write function only, to print output to the standard output. 
+#The printf function should be able to convert decimal to binary.

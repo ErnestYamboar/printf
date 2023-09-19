@@ -8,7 +8,7 @@ int _printf(const char *format, ...)
 	unsigned int i, my_printedchar = 0;
 
 	if (format == NULL)
-		return(-1);
+		return (-1);
 
 	va_start(myfunc, format);
 

@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 		else if (format[i + 1] == 'd' || format[i + 1] == 'i')
 		{
 			num = va_arg(myfunc, int);
-			my_printedchar += my_putchar(num);
+			my_printedchar += my_printNum(num);
 			i++;
 		}
 		else if (format[i] == '%')

@@ -39,6 +39,7 @@ int my_printNum(int num)
 	char *str;
 	int len = 0;
 	int tmp;
+	tmp = num;
 
 	if (num == 0)
 	{
@@ -67,5 +68,5 @@ int my_printNum(int num)
 
 	for (m = len - 1; m >= 0; m--)
 		my_putchar(str[m]);
-	}
+	return (num);
 }

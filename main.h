@@ -9,5 +9,6 @@
 int _printf(const char *format, ...);
 int my_putchar(char c);
 int my_put(char *str);
+int my_printNum(int num);
 
 #endif 

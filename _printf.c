@@ -16,11 +16,11 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			my_putchar(format[i]);
+			my_printedchar += my_putchar(format[i]);
 		}
 		else if (format[i + 1]  == 'c')
 		{
-			my_putchar(va_arg(myfunc, int));
+			my_printedchar += my_putchar(va_arg(myfunc, int));
 			i++;
 		}
 		else if (format[i + 1] == 's')
@@ -37,10 +37,9 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%')
 		{
-			my_putchar('%');
+			my_printedchar += my_putchar('%');
 			i++;
 		}
-		my_printedchar++;
 	}
 		va_end(myfunc);
 		return (my_printedchar);

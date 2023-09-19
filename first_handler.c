@@ -31,42 +31,40 @@ int my_strlen(char *str)
 /**
  * my_printNum - function that print an integer
  * @num: number
- * Return: number
  */
 int my_printNum(int num)
 {
 	int m = 0;
-	char *str;
-	int len = 0;
-	int tmp;
-	tmp = num;
+	int arrNum[2048];
+	int is_neg = 0;
+	int counter = 0;
 
-	if (num == 0)
-	{
-		return (my_putchar('0'));
-	}
 	if (num < 0)
 	{
-		my_putchar('-');
+		is_neg = 1;
 		num = -num;
 	}
-	if (num > 0)
+	if (num == 0)
 	{
-		while (tmp > 0)
-		{
-			tmp /= 10;
-			len++;
-		}
-		str = malloc(sizeof(char) * (len + 1));
-		if (str == NULL)
-			return (-1);
-		str[m] = '0' + num % 10;
+		arrNum[m] = 0;
+		m++;
+	}
+	while (num > 0)
+	{
+		arrNum[m] = num % 10;
 		num /= 10;
 		m++;
 	}
-	str[m] = '\0';
-
-	for (m = len - 1; m >= 0; m--)
-		my_putchar(str[m]);
-	return (num);
+	if (is_neg == 1)
+	{
+		arrNum[m] = '-';
+		m++;
+	}
+	counter = m;
+	while (m > 0)
+	{
+		m--;
+		my_putchar(arrNum[m] + '0');
+	}
+	return (counter);
 }

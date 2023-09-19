@@ -3,7 +3,7 @@
 int _printf(const char *format, ...)
 {
 	va_list myfunc;
-	int num, numStr;
+	int num;
 	char *my_str;
 	unsigned int i, my_printedchar = 0;
 
@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 		else if (format[i + 1] == 'd' || format[i + 1] == 'i')
 		{
 			num = va_arg(myfunc, int);
-			my_printedchar += my_put(num);
+			my_printedchar += my_putchar(num);
 			i++;
 		}
 		else if (format[i] == '%')

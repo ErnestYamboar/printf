@@ -43,5 +43,37 @@ int main(void)
     printf("String:[%s]\n", "I am a string !");
    /* _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");*/
+    _printf("%d", 1024);
+printf("%d", 1024);
+_printf("%d", -1024);
+printf("%d", -1024);
+_printf("%d", 0);
+printf("%d", 0);
+_printf("%d", INT_MAX);
+printf("%d", INT_MAX);
+_printf("%d", INT_MIN);
+printf("%d", INT_MIN);
+printf("There is %d bytes in %d KB\n", 1024, 1);
+_printf("%d - %d = %d\n", 1024, 2048, -1024);
+printf("%d - %d = %d\n", 1024, 2048, -1024);
+_printf("%d + %d = %d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+printf("%d + %d = %d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+_printf("%i", 1024);
+printf("%i", 1024);
+_printf("%i", -1024);
+printf("%i", -1024);
+_printf("%i", 0);
+printf("%i", 0);
+_printf("%i", INT_MAX);
+printf("%i", INT_MAX);
+_printf("%i", INT_MIN);
+printf("%i", INT_MIN);
+_printf("iddi%diddiiddi\n", 1024);
+printf("iddi%diddiiddi\n", 1024);
+_printf("%d", 10000);
+printf("%d", 10000);
+_printf("%i", 10000);
+printf("%i", 10000);
+
     return (0);
 }

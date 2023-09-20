@@ -31,6 +31,7 @@ int my_strlen(char *str)
 /**
  * my_printNum - function that print an integer
  * @num: number
+ * Return: number of characters printed
  */
 int my_printNum(int num)
 {

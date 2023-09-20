@@ -64,7 +64,10 @@ int my_printNum(int num)
 	while (m > 0)
 	{
 		m--;
-		my_putchar(arrNum[m] + '0');
+		if (arrNum[m] == '-')
+			my_putchar(arrNum[m]);
+		else
+			my_putchar(arrNum[m] + '0');
 	}
 	return (counter);
 }
